@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model User
+<div class="text-center">
+<h1>Enter your Information</h1>
+<form asp-action="Create" asp-controller="Home" method="POST">
+    <table>
+        <!-- <tr>
+            <span class="field-validation-valid text-danger" 
+                data-valmsg-for="FirstName" 
+                data-valmsg-replace="true">
+            </span>
+        </tr> -->
+
+        <tr><span asp-validation-for="FirstName"></span><br></tr>
+        <tr>
+            <td>
+                <label asp-for="FirstName">First Name</label>
+            </td>
+            <td>
+                <input asp-for="FirstName">
+            </td>
+        </tr>
+        <tr><span asp-validation-for="LastName"></span></tr>
+        <tr>
+            <td>
+                <label asp-for="LastName">Last Name</label>
+            </td>
+            <td>
+                <input asp-for="LastName">
+            </td>
+        </tr>
+        <tr><span asp-validation-for="Age"></span></tr>
+        <tr>
+            <td>
+                <label asp-for="Age">Age: </label>
+            </td>
+            <td>
+                <input asp-for="Age">
+            </td>
+        </tr>
+        <tr><span asp-validation-for="Email"></span></tr>
+        <tr>
+            <td>
+                <label asp-for="Email">Email Address:</label>
+            </td>
+            <td>
+                <input asp-for="Email">
+            </td>
+        </tr>
+        <tr><span asp-validation-for="Password"></span></tr>
+        <tr>
+            <td>
+                <label asp-for="Password">Password: </label>
+            </td>
+            <td>
+                <input asp-for="Password">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Submit">
+            </td>
+        </tr>
+    </table>
+</form>
+</div>
